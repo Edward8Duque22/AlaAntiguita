@@ -182,6 +182,57 @@
     display: block;
   }
 
+  .antanio .verso em {
+    font-style: italic;
+    color: #5c3a10;
+  }
+
+  .antanio .verso strong {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* Clímax final voz antigua */
+  .antanio .climax {
+    border-left: 2px solid var(--gold);
+    padding-left: 20px;
+    margin-left: 4px;
+  }
+
+  .antanio .verso-climax {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.08rem;
+    font-style: italic;
+    color: #3a2208;
+    line-height: 2.1;
+    letter-spacing: 0.015em;
+  }
+
+  .antanio .cierre {
+    margin-top: 2.2em;
+    text-align: center;
+  }
+
+  .antanio .verso-remate {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 2.2;
+    display: block;
+    letter-spacing: 0.02em;
+  }
+
+  .antanio .verso-final {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.28rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--gold);
+    letter-spacing: 0.03em;
+    margin-top: 6px;
+  }
+
   .antanio .seccion-titulo {
     font-family: 'Playfair Display', serif;
     font-size: 0.7rem;
@@ -435,16 +486,16 @@
 
         <div class="seccion-titulo">✦</div>
 
-        <div class="estrofa">
-          <span class="verso">En la vastedad silenciosa donde los siglos se disuelven,</span>
-          <span class="verso">donde las estrellas agotan su combustible y se apagan,</span>
-          <span class="verso">tú permaneces —constante, absoluta— mientras los mundos se vuelven</span>
-          <span class="verso">polvo otra vez, y las memorias antiguas se borran y se pagan.</span>
+        <div class="estrofa climax">
+          <span class="verso verso-climax">En la vastedad silenciosa donde los siglos se disuelven,</span>
+          <span class="verso verso-climax">donde las estrellas agotan su combustible y se apagan,</span>
+          <span class="verso verso-climax">tú permaneces —constante, absoluta— mientras los mundos se vuelven</span>
+          <span class="verso verso-climax">polvo otra vez, y las memorias antiguas se borran y se pagan.</span>
         </div>
 
-        <div class="estrofa">
-          <span class="verso">Yo seré ese polvo. Tú, el fulgor que nunca se extingue.</span>
-          <span class="verso">Y habrá sido suficiente con haberte contemplado una vez.</span>
+        <div class="estrofa cierre">
+          <span class="verso verso-remate">Yo seré ese polvo. Tú, el fulgor que nunca se extingue.</span>
+          <span class="verso verso-remate verso-final">Y habrá sido suficiente con haberte contemplado una vez.</span>
         </div>
 
       </div><!-- /antanio -->
@@ -560,29 +611,4 @@
     const poema = document.getElementById('poema');
     const antanio = document.getElementById('antanio');
     const moderno = document.getElementById('moderno');
-    const label = document.getElementById('modoLabel');
-    const btn = document.querySelector('.toggle-btn');
-
-    poema.classList.add('fade');
-
-    setTimeout(() => {
-      if (modoActual === 'antanio') {
-        antanio.style.display = 'none';
-        moderno.style.display = 'block';
-        label.textContent = '— Voz de hoy —';
-        btn.textContent = 'Volver a la voz antigua';
-        modoActual = 'moderno';
-      } else {
-        moderno.style.display = 'none';
-        antanio.style.display = 'block';
-        label.textContent = '— Voz antigua —';
-        btn.textContent = 'Traducir al lenguaje de hoy';
-        modoActual = 'antanio';
-      }
-      poema.classList.remove('fade');
-    }, 400);
-  }
-</script>
-</body>
-          </html>
-  
+    const label = docum
