@@ -620,14 +620,14 @@
       if (modoActual === 'antanio') {
         antanio.style.display = 'none';
         moderno.style.display = 'block';
-        label.textContent = '— Voz de hoy —';
-        btn.textContent = 'Volver a la voz antigua';
+        label.textContent = '— Lenguaje actual —';
+        btn.textContent = 'Volver a la traducción antigua';
         modoActual = 'moderno';
       } else {
         moderno.style.display = 'none';
         antanio.style.display = 'block';
-        label.textContent = '— Voz antigua —';
-        btn.textContent = 'Traducir al lenguaje de hoy';
+        label.textContent = '— Lenguaje antiguo —';
+        btn.textContent = 'Traducir al lenguaje de actual';
         modoActual = 'antanio';
       }
       poema.classList.remove('fade');
